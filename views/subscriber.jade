@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    h1 Subscribers Details
+    p Aqui eu busco a tabela subscribers com os dados mais especificos do users.
+    p A redundância em um DB family columns é aceitável quando se evita joins, por isso a tabela subscribers também possui a coluna likes.
+    ul
+        li First Name: #{first_name}
+        li Last Name: #{last_name}
+        li E-mail: #{email}
+        li User id: #{id}
+        li Likes I Have: #{likes}
+            a(href="/likeit/#{id}") 
+                span LIKE #{first_name} 

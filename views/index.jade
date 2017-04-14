@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1 Neste exemplo de uma mini rede social qualquer um pode cadastrar inscritos e dar likes neles.
+  p Existem 2 tabelas, subscribers e likeds. 
+    
+  
+  h1 Ranking Of More Likeds Subscribers
+  span Aqui é um exemplo da lista do raking de likes utilizando a tabela Likeds que contem as colunas user_id(Mesmo id encontrado na tabela subscribers),
+  span first_name (Mesmo encontrado na tabela subscribers), e likes.
+  br
+  span Ter valores repetidos neste exemplo é a ideia da tabela family columns para sempre evitar joins. Sendo necessário exibir os
+  span dados da tabela subscribers, quando ele clicar, aí sim busca a outra tabela que possui dados mais especificos. 
+  ul 
+    each liked, i in likeds
+      li #{liked.first_name} Likes: #{liked.likes}
+        a(href ="/subscriber/#{liked.user_id}")
+          span  My Profile
+  br
+  a(href = "/addsubscriber") 
+   h2 Add Subscriber
+
+
+  a(href = "/prevayler")
+    h2 1- Escreva um resumo sobre o padrão de projeto Prevayler(Prevalência)

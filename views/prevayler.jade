@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1 Prevayler
+  ul
+    span Prevayler não é um banco de dados, não possui compartilhamento de dados, integridade, interface via SQL, não é possível usar SQL, sendo o programador quem deve fazer a lógica de buscas e tudo mais.
+    br
+    span Software livre e escrito predominantemente em java, e não precisa ser instalado pois ele é uma biblioteca, só precisando ser referenciado.Seu conceito de prevalência de objetos foi criado por Klaus Wuestfeld e amigos.
+    br
+    span Cerca de, pelo menos 3 à 4 vezes mais rápido do que os DBs tradicionais pois seus dados são todos armazenados na memória, sendo assim possuindo um limite bem definido de dados, e que pode ser compensado pela ótima escalabilidade.
+    br
+    span Todos os dados são armazenados em memória, no entanto, no momento de fechar o servidor, e também em intervalos regulares, os objetos são seriados para o disco(cria-se um snapshot), E todas as manipulações de objetos são salvas em um log de comandos imediatamente no disco. Com isso, se o servidor por algum motivo cair o Prevayler busca o snapshot e usa a Des-seriação e após busca todas as  transações armazenados no log de comandos antes da queda, que podem ser: criação, alteração e remoção, assim garantindo a estabilidade dos dados originais.
+
