@@ -8,7 +8,7 @@ const cassandra = require('cassandra-driver');
 var index = require('./routes/index');
 var subscriber = require('./routes/subscriber');
 var addSubscriber = require('./routes/addsubscriber');
-var likeIt = require('./routes/likeIt');
+var likeIt = require('./routes/likeit');
 var prevayler = require('./routes/prevayler');
 
 var app = express();
